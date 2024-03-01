@@ -31,15 +31,15 @@ test("maze solver", function () {
     // there is only one path through
     const result = maze_solver(maze, "x", { x: 10, y: 0 }, { x: 1, y: 5 });
     expect(drawPath(maze, result)).toEqual(drawPath(maze, mazeResult));
+    console.log(drawPath(maze, result));
 });
 
 function drawPath(data: string[], path: Point[]) {
-    const data2 = data.map((row) => row.split(''));
+    const data2 = data.map((row) => row.split(""));
     path.forEach((p) => {
         if (data2[p.y] && data2[p.y][p.x]) {
-            data2[p.y][p.x] = '*';
+            data2[p.y][p.x] = "*";
         }
     });
-    return data2.map(d => d.join(''));
+    return data2.map((d) => d.join(""));
 }
-
