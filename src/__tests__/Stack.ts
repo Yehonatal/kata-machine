@@ -22,6 +22,4 @@ test("stack", function () {
     list.push(69);
     expect(list.peek()).toEqual(69);
     expect(list.length).toEqual(1);
-
-    //yayaya
 });
